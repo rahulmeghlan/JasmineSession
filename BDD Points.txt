@@ -2,3 +2,5 @@
 
  - BDD tests should be more focused on the features, not the actual results
  - BDD is to help design the software, whereas TDD can be said to be more inclined to test the software.
+ 
+ 
