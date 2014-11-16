@@ -1,0 +1,10 @@
+============Common Use Cases =============
+
+1) When users visits a web-page for the first time, he is greeted with a login/signup poopup.
+2) Login Flow:
+   - User writes credentials and clicks login,
+   - Credentials are sent to the API and response success/failure comes :
+     I) Success											II) Failure
+	 - Cookie is set and username is					- Error Message is shown to the user, no cookie is set 
+	   written on the top-right
+  	   

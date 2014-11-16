@@ -1,0 +1,10 @@
+=============== Installation Instructions for PhantomJS =============
+
+- Download the Zip file from : http://phantomjs.org/download.html 
+- Unzip the folder 
+- Copy the folder path and paste it at the end in the Path variable
+
+
+=============== REPL =============
+- REPL is a simple, interactive computer programming environment.
+- Read about REPL in the docs Here (http://phantomjs.org/repl.html) . Again, REPL is the executable phantomjs.exe not the command line.

@@ -1,0 +1,12 @@
+================== Spec Runners ==============
+
+You can find a list of spec-runners using phantomjs over here (http://phantomjs.org/headless-testing.html)
+
+We will take grunt-contrib-jasmine specrunner as an example.
+
+===================== Installation Instructions ===================
+- npm install phantom-jasmine -g
+- Ensure that phantom-jasmine is set in the PATH variable
+
+===================== Running Tests ================
+phantom-jasmine testRunner.html
