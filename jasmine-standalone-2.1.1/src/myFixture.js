@@ -1,2 +1,2 @@
-jasmine.getFixtures().fixturesPath = 'htmlFixtures/';
+//jasmine.getFixtures().fixturesPath = 'htmlFixtures/';
 //console.log(jasmine.getFixtures());

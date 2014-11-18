@@ -9,7 +9,6 @@ describe("Testing Fixtures", function () {
     it("should load the fixture", function () {
         loadFixtures("htmlFixtures/myFixture.html");
         var $myFixture = $("#my-fixture");
-        $myFixture.html("This is modified from the the test case !");
-        expect($myFixture).toContainText("This is modified from the the test case !");
-    })
-})
+        expect($myFixture).toBeInDOM();
+    });
+});
