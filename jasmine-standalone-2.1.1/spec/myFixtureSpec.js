@@ -11,4 +11,13 @@ describe("Testing Fixtures", function () {
         var $myFixture = $("#my-fixture");
         expect($myFixture).toBeInDOM();
     });
+
+    it("should write the name after login", function () {
+        loadFixtures("htmlFixtures/myFixture.html");
+        var myObj = new myFixture();
+        myObj.click();
+        var $myFixture = $("#my-fixture");
+        $myFixture.find("input").trigger("click");
+        expect($myFixture.find(".username")).toContainHtml("Rahul");
+    })
 });
