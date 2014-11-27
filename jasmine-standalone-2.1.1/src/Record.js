@@ -57,7 +57,7 @@ Record.prototype.handleEvents = function (recorder) {
     });
     // Handle the click event of the stop-btn
     $(".stop-btn").on("click", function () {
-        recorderObj.stopRecording(recorderObj);
+        recorderObj.stopRecording(recorderObj);  // Question : Try to fail this test case
     });
 };
 
