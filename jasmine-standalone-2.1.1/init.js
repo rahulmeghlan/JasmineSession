@@ -5,7 +5,5 @@
  * Time: 8:13 PM
  * To change this template use File | Settings | File Templates.
  */
-var record = new Record();
-$(".record-btn").on("click", function () {
-    record.startRecording(); // todo : refactor this in a way that recording should only start if a song object is passed to it.
-});
+var recorder = new Record(new Song("Aane chaar ane"));
+recorder.handleEvents(recorder);

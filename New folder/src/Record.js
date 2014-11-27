@@ -5,7 +5,19 @@
  * Time: 3:34 PM
  * To change this template use File | Settings | File Templates.
  */
-function Record(){}
+function Record() {
+}
+
+
+Record.prototype.startRecording = function () {
+    // add a check that recording should only happen when the song is playing
+    var song = new Song("Nice Song");
+    var player = new Player();
+    if (player.play(song)) {
+        this.isRecording = true;
+        $(".record-sign").show();
+    }
+};
 
 // requirements:
 // - when record is clicked

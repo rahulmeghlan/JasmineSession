@@ -6,21 +6,34 @@
  * To change this template use File | Settings | File Templates.
  */
 function Record(song) {
+    // todo : this var is used to describe if a recorder instance can be created or not, need to use a better name for it
     this.isRecording = song && Boolean(song.songName) || false;
 }
 
 /**
- * @method: startRecording()
- * @parmas: none
+ * @method: startRecording(recorder)
+ * @param: recorder
  * @desc: initialize the recording functionality or throw an error if no song is found
  * */
 Record.prototype.startRecording = function (recorder) {
-
     if (!recorder.isRecording) {
         recorder.throwError("Recording cannot start since no song selected to be played...");
     }
     $(".record-sign, .stop-btn").show();
     $(".record-btn").attr("disabled", "disabled");
+};
+
+/**
+ * @method: stopRecording(recorder)
+ * @param: recorder
+ * @desc: initialize the recording functionality or throw an error if no song is found
+ * */
+Record.prototype.stopRecording = function (recorder) {
+    if (!recorder.isRecording) {
+        recorder.throwError("Recording cannot start since no song selected to be played...");
+    }
+    $(".record-sign, .stop-btn").hide();
+    $(".record-btn").removeAttr("disabled", "disabled");
 };
 
 /**
@@ -41,6 +54,10 @@ Record.prototype.handleEvents = function (recorder) {
     // Handle the click event of the record-btn
     $(".record-btn").on("click", function () {
         recorderObj.startRecording(recorderObj);
+    });
+    // Handle the click event of the stop-btn
+    $(".stop-btn").on("click", function () {
+        recorderObj.stopRecording(recorderObj);
     });
 };
 

@@ -11,15 +11,16 @@ describe("when record is clicked, it", function () {
         song;
 
     beforeEach(function () {
+        loadFixtures("htmlFixtures/PlayerFixture.html");
+
         song = new Song("some song...");
         player = new Player();
         recorder = new Record(song);
-        loadFixtures("htmlFixtures/PlayerFixture.html");
         recorder.handleEvents(recorder);
         $(".record-btn").trigger("click");
     });
     afterEach(function () {
-        recorder = "";
+        recorder = {};  // re-initialize the recorder object after every spec
     });
     // todo : this spec needs to be visited again for more work
     xit("should show an error message if no song is played", function () {
@@ -36,20 +37,18 @@ describe("when record is clicked, it", function () {
     it("should show stop button", function () {
         expect($(".stop-btn")).toBeVisible();
     });
-    xdescribe("stop is clicked in recording mode, it", function () {
-        xit("should enable the record button", function () {
-
+    describe("When stop is clicked in recording mode, it", function () {
+        beforeEach(function () {
+            $(".stop-btn").trigger("click");
         });
-        xit("should disable the stop button", function () {
-
+        it("should enable the record button", function () {
+            expect($(".record-btn")).not.toBeDisabled();
         });
-        xit("should hide the recording icon", function () {
-
+        it("should hide the stop button", function () {
+            expect($(".stop-btn")).toBeHidden();
         });
-        xit("should store the currently playing song in the data store", function () {
-            // should store the currently playing song in the localStorage
+        it("should hide the recording icon", function () {
+            expect($(".record-sign")).toBeHidden();
         });
-
-
     })
 });
