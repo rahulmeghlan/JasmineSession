@@ -1,0 +1,25 @@
+.player {
+    border: 1px solid #000;
+    border-radius: 5px;
+    padding: 10px 5px;
+}
+
+.record-sign{
+    background: red;
+    height: 15px;
+    width: 15px;
+    border-radius: 10px;
+    display: none;
+}
+
+.button-panel{
+    text-align: center;
+}
+
+.song-name{
+    text-align: center;
+}
+
+.stop-btn{
+    display: none;
+}
